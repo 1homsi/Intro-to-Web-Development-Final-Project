@@ -1,0 +1,76 @@
+.about {
+  margin-left: 10%;
+  padding: 10px;
+}
+
+.inner-section {
+  margin-top: 3%;
+  width: 60%;
+  background-color: #fff;
+  padding: 65px;
+}
+
+.AboutTop {
+  font-family: "Leckerli One", cursive;
+  /* text-align: center; */
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.text {
+  font-size: 15px;
+  color: #545454;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.skills button {
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 32px;
+  width: 180px;
+  background-color: #b20238;
+  transition: all 0.35s;
+  color: white;
+  cursor: pointer;
+}
+
+.skills button:hover {
+  transition: all 0.2s ease-in-out;
+  background-color: #c73552;
+  color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  .inner-section {
+    padding: 80px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .about {
+    background-size: 100%;
+    padding: 100px 40px;
+  }
+  .inner-section {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    padding: 0;
+  }
+  .inner-section {
+    padding: 60px;
+  }
+  .skills button {
+    font-size: 19px;
+    padding: 5px;
+    width: 160px;
+  }
+}
