@@ -1,0 +1,106 @@
+.coinContainer {
+  margin-left: 50%;
+  padding-left: 50%;
+  display: flex;
+  justify-content: center;
+}
+.coinRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80px;
+  border-bottom: 3px solid #b20238;
+  width: 900px;
+}
+
+.coin {
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+  max-width: 300px;
+}
+.coin h1 {
+  font-size: 16px;
+  width: 150px;
+}
+
+.coin img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.coinSymbol {
+  text-transform: uppercase;
+}
+
+.coinData {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.coinPrice {
+  width: 110px;
+}
+
+.coinVolume {
+  width: 230px;
+}
+
+.coinMarketcap {
+  width: 155px;
+}
+
+.coinPercent {
+  width: 100%;
+}
+.red {
+  color: red;
+}
+.green {
+  color: rgb(53, 199, 53);
+}
+
+/* some coin shit */
+.coinApp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px;
+  color: black;
+}
+.coinSearch {
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coinText {
+  margin-bottom: 32px;
+  text-align: right;
+}
+
+.coinInput {
+  padding-left: 16px;
+  width: 1000px;
+  height: 50px;
+  border-radius: 7px;
+  border: none;
+  background-image: linear-gradient(
+    -225deg,
+    #b20238 0%,
+    #c73552 48%,
+    darkred 100%
+  );
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.coinInput::placeholder {
+  color: white;
+}
