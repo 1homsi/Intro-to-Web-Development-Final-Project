@@ -1,6 +1,4 @@
 .coinContainer {
-  margin-left: 50%;
-  padding-left: 50%;
   display: flex;
   justify-content: center;
 }
@@ -57,7 +55,7 @@
   width: 100%;
 }
 .red {
-  color: red;
+  color: rgb(211, 22, 22);
 }
 .green {
   color: rgb(53, 199, 53);
@@ -103,4 +101,24 @@
 
 .coinInput::placeholder {
   color: white;
+}
+
+#ButtonForRefreshDaddy {
+  border-radius: 7px;
+  background: #b20238;
+  padding: 10px 22px;
+  color: #fff;
+  font-weight: bolder;
+  font-size: large;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+#ButtonForRefreshDaddy:hover {
+  transition: all 0.2s ease-in-out;
+  background: #c73552;
+  color: #fff;
 }

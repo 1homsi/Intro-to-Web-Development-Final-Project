@@ -25,6 +25,9 @@ export default function CryptoT() {
         coin.name.toString().toLowerCase().includes(search.toLowerCase())
     )
 
+    function refreshPage() {
+        window.location.reload(false);
+    }
 
     return (
         <div className="coinApp">
@@ -35,6 +38,8 @@ export default function CryptoT() {
                         onChange={handleChange}
                     />
                 </form>
+                <br />
+                <button id="ButtonForRefreshDaddy" onClick={refreshPage}>Refresh when you feel like it daddy</button>
             </div>
             {filteredCoins.map(coin => {
                 return (

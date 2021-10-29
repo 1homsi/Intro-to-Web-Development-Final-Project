@@ -1,24 +1,24 @@
 import React from 'react'
 import './Coin.css';
 
-const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap }) => {
+const Coin = (props) => {
     return (
         <div className="Container">
             <div className="coinRow">
                 <div className="coin">
-                    <img src={image} alt="cryptohere" />
-                    <h1>{name}</h1>
-                    <p className="coinSymbol">{symbol}</p>
+                    <img src={props.image} alt="cryptohere" />
+                    <h1>{props.name}</h1>
+                    <p className="coinSymbol">{props.symbol}</p>
                 </div>
                 <div className="coinData">
-                    <p className="coinPrice">${price}/</p>
-                    <p className="coinVolume"> ${volume.toLocaleString()}</p>
-                    {priceChange < 0 ? (
-                        <p className="coinPercent red">{priceChange.toFixed(2)}%</p>
-                    ) : (<p className="coinPercent green">{priceChange.toFixed(2)}%</p>)
+                    <p className="coinPrice">${props.price}/</p>
+                    <p className="coinVolume"> ${props.volume.toLocaleString()}</p>
+                    {props.priceChange < 0 ? (
+                        <p className="coinPercent red">{props.priceChange.toFixed(2)}%</p>
+                    ) : (<p className="coinPercent green">{props.priceChange.toFixed(2)}%</p>)
                     }
                     <p className="coinMarketcap">
-                        Mkt Cap: ${marketcap.toLocaleString()}
+                        Mkt Cap: ${props.marketcap.toLocaleString()}
                     </p>
                 </div>
             </div>
