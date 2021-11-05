@@ -10,7 +10,7 @@ export default function FourOFour() {
                     <h1>Oops!</h1>
                     <h2>404 - The Page can't be found</h2>
                 </div>
-                <Link to="/">Go Home</Link>
+                <Link to="/">Go Home Father</Link>
             </div>
         </div>
     )

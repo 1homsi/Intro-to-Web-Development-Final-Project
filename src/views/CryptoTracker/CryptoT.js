@@ -39,7 +39,7 @@ export default function CryptoT() {
                     />
                 </form>
                 <br />
-                <button id="ButtonForRefreshDaddy" onClick={refreshPage}>Refresh when you feel like it daddy</button>
+                <button id="ButtonForRefreshDaddy" onClick={refreshPage}>Refresh when you feel like it</button>
             </div>
             {filteredCoins.map(coin => {
                 return (

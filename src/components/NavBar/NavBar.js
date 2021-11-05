@@ -51,15 +51,18 @@ export default function NavBar() {
           <NavLink to='/cryptot' activeStyle>
             Crypto Tracker
           </NavLink>|
-          <NavLink to='/about' activeStyle>
-            About
-          </NavLink>|
-          <NavLink to='/about' activeStyle>
-            Contact Us
+          <NavLink to='/liveE' activeStyle>
+            Live Events
           </NavLink>
+          {/* {/* <NavLink to='/about' activeStyle>
+            About
+          </NavLink>| }
+            < NavLink to='/about' activeStyle>
+              Contact Us
+        </> */}
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to='/about'>Browse</NavBtnLink>
+          <NavBtnLink to='/about'>About Us</NavBtnLink>
         </NavBtn>
       </Nav>
     </>

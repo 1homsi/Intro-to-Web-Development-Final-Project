@@ -1,0 +1,128 @@
+.idkSomeMargin {
+  margin-left: 20px;
+}
+
+.countriesContainer {
+  display: flex;
+  justify-content: center;
+}
+.countriesRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80px;
+  border-bottom: 3px solid #b20238;
+  width: 900px;
+}
+
+.countries {
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+  max-width: 300px;
+}
+.countries h1 {
+  font-size: 16px;
+  width: 150px;
+}
+
+.countries img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.countriesSymbol {
+  text-transform: uppercase;
+}
+
+.countriesData {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.countriesPrice {
+  width: 110px;
+}
+
+.countriesVolume {
+  width: 230px;
+}
+
+.countriesMarketcap {
+  width: 155px;
+}
+
+.countriesPercent {
+  width: 100%;
+}
+.red {
+  color: rgb(211, 22, 22);
+}
+.green {
+  color: rgb(53, 199, 53);
+}
+
+/* some countries shit */
+.countriesApp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px;
+  color: black;
+}
+.countriesSearch {
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.countriesText {
+  margin-bottom: 32px;
+  text-align: right;
+}
+
+.countriesInput {
+  padding-left: 16px;
+  width: 1000px;
+  height: 50px;
+  border-radius: 7px;
+  border: none;
+  background-image: linear-gradient(
+    -225deg,
+    #b20238 0%,
+    #c73552 48%,
+    darkred 100%
+  );
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.countriesInput::placeholder {
+  color: white;
+}
+
+#ButtonForRefreshDaddy {
+  border-radius: 7px;
+  background: #b20238;
+  padding: 10px 22px;
+  color: #fff;
+  font-weight: bolder;
+  font-size: large;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+#ButtonForRefreshDaddy:hover {
+  transition: all 0.2s ease-in-out;
+  background: #c73552;
+  color: #fff;
+}

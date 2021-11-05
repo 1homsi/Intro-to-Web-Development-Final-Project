@@ -11,6 +11,7 @@ import HomeScreen from "./views/HomeScreen";
 import ComingSoon from "./views/ComingSoon";
 import CovidT from "./views/Covid-19 tracker/covidtracker"
 import CryptoT from "./views/CryptoTracker/CryptoT"
+import liveevent from "./views/LiveEvent/liveevent";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="/comingsoon" component={ComingSoon}></Route>
             <Route path="/ctracker" component={CovidT} ></Route>
             <Route path="/Cryptot" component={CryptoT}></Route>
+            <Route path="/liveE" component={liveevent}></Route>
             <Route path="/" component={HomeScreen} exact></Route>
             <Route component={FourOFourScreen} exact></Route>
           </Switch>
