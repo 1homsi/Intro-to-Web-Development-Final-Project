@@ -1,46 +1,46 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import Event from "./Event"
+import "./Livee.css"
 
 
 export default function Liveevent() {
-    const [livee, setlivee] = useState([])
+    const [eventData, setEventData] = useState([])
     const [search, setSearch] = useState('')
 
     useEffect(() => {
-        axios.get('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events')
-            .then(res => {
-                console.log("We made it this far")
-                setlivee(res.data);
-                console.log(res.data);
-                console.log("we didnt make it this far")
-            }).catch(error => console.log(error))
-    }, []);
+        const fetchEvents = async () => {
+            const res = await fetch('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events')
+            const { events } = await res.json()
+            setEventData(events)
+        }
 
+        fetchEvents()
+    }, [])
 
     const handleChange = e => {
         setSearch(e.target.value)
     }
 
-    const flive = livee.filter(livee =>
-        livee.id.toString().includes(search)
+    const flive = eventData.filter(eventData =>
+        eventData.title.toString().toLowerCase().includes(search.toLowerCase())
     )
 
     return (
-        <div className="liveeApp">
-            <div className="liveeearch">
-                <h1 className="liveeText">Search</h1>
+        <div className="LiveApp">
+            <div className="Liveearch">
+                <h1 className="LiveText">Search</h1>
                 <form>
-                    <input className="liveeInput" type="text" placeholder="Search Here"
+                    <input className="LiveInput" type="text" placeholder="Search Here"
                         onChange={handleChange}
                     />
                 </form>
                 <br />
             </div>
-            {flive.map(livee => {
+            {flive.map(eventData => {
                 return (
-                    <Event key={livee.id}
-
+                    <Event key={eventData.id}
+                        name={eventData.id}
+                        title={eventData.title}
                     />
                 )
             })}
