@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Four.css'
+import './Four.scss'
 
 export default function FourOFour() {
     return (
@@ -10,7 +10,7 @@ export default function FourOFour() {
                     <h1>Oops!</h1>
                     <h2>404 - The Page can't be found</h2>
                 </div>
-                <Link to="/">Go Home Father</Link>
+                <Link to="/">Home</Link>
             </div>
         </div>
     )

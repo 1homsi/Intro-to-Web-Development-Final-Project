@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './NavBar.css'
+import './NavBar.scss'
 import {
   Nav,
   NavLogoLink,
@@ -54,12 +54,6 @@ export default function NavBar() {
           <NavLink to='/liveE' activeStyle>
             Live Events
           </NavLink>
-          {/* {/* <NavLink to='/about' activeStyle>
-            About
-          </NavLink>| }
-            < NavLink to='/about' activeStyle>
-              Contact Us
-        </> */}
         </NavMenu>
         <NavBtn>
           <NavBtnLink to='/about'>About Us</NavBtnLink>

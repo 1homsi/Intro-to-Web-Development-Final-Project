@@ -1,23 +1,23 @@
 import React from 'react'
-import './Coin.css';
+import './Coin.scss';
 
 const Coin = (props) => {
     return (
-        <div className="Container">
-            <div className="coinRow">
-                <div className="coin">
+        <div className="CContainer">
+            <div className="CRow">
+                <div className="C">
                     <img src={props.image} alt="cryptohere" />
                     <h1>{props.name}</h1>
-                    <p className="coinSymbol">{props.symbol}</p>
+                    <p className="CSymbol">{props.symbol}</p>
                 </div>
-                <div className="coinData">
-                    <p className="coinPrice">${props.price}/</p>
-                    <p className="coinVolume"> ${props.volume.toLocaleString()}</p>
+                <div className="CData">
+                    <p className="CPrice">${props.price}/</p>
+                    <p className="CVolume"> ${props.volume.toLocaleString()}</p>
                     {props.priceChange < 0 ? (
-                        <p className="coinPercent red">{props.priceChange.toFixed(2)}%</p>
-                    ) : (<p className="coinPercent green">{props.priceChange.toFixed(2)}%</p>)
+                        <p className="CPercent red">{props.priceChange.toFixed(2)}%</p>
+                    ) : (<p className="CPercent green">{props.priceChange.toFixed(2)}%</p>)
                     }
-                    <p className="coinMarketcap">
+                    <p className="CMarketcap">
                         Mkt Cap: ${props.marketcap.toLocaleString()}
                     </p>
                 </div>
@@ -26,4 +26,4 @@ const Coin = (props) => {
     )
 }
 
-export default Coin
+export default Coin;

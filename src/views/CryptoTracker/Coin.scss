@@ -1,57 +1,62 @@
-.coinContainer {
+/* some C shit */
+.CContainer {
   display: flex;
   justify-content: center;
 }
-.coinRow {
+.CRow {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   height: 80px;
-  border-bottom: 3px solid #b20238;
+  border: 2px solid #7f7eff;
+  margin-bottom: 10px;
+  border-radius: 20px 7px 20px 7px;
+  // border-top-right-radius: 20px;
+  // border-bottom-left-radius: 20px;
+  padding: 3%;
   width: 900px;
 }
-
-.coin {
+.C {
   display: flex;
   align-items: center;
   padding-right: 24px;
   max-width: 300px;
+  h1 {
+    font-size: 16px;
+    width: 150px;
+  }
+  img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+  }
 }
-.coin h1 {
-  font-size: 16px;
-  width: 150px;
-}
-
-.coin img {
-  height: 30px;
-  width: 30px;
-  margin-right: 10px;
-}
-
-.coinSymbol {
+.CSymbol {
   text-transform: uppercase;
 }
-
-.coinData {
+.CData {
   display: flex;
   text-align: center;
   justify-content: space-between;
   width: 100%;
 }
-.coinPrice {
+.CPrice {
+  margin-left: 10px;
+  margin-top: 10px;
   width: 110px;
 }
+.CVolume {
+  margin-top: 10px;
 
-.coinVolume {
   width: 230px;
 }
-
-.coinMarketcap {
+.CMarketcap {
   width: 155px;
 }
-
-.coinPercent {
+.CPercent {
+  margin-top: 10px;
+  font-weight: bolder;
   width: 100%;
 }
 .red {
@@ -60,29 +65,25 @@
 .green {
   color: rgb(53, 199, 53);
 }
-
-/* some coin shit */
-.coinApp {
+.CApp {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 64px;
   color: black;
 }
-.coinSearch {
+.CSearch {
   margin-bottom: 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.coinText {
+.CText {
   margin-bottom: 32px;
   text-align: right;
 }
-
-.coinInput {
+.CInput {
   padding-left: 16px;
   width: 1000px;
   height: 50px;
@@ -90,35 +91,16 @@
   border: none;
   background-image: linear-gradient(
     -225deg,
-    #b20238 0%,
-    #c73552 48%,
-    darkred 100%
+    #7f7eff 0%,
+    #a390e4 21%,
+    #a390e4 59%,
+    #cc8b8c 79%,
+    #c68866 100%
   );
   color: white;
   font-weight: bolder;
   font-size: larger;
-}
-
-.coinInput::placeholder {
-  color: white;
-}
-
-#ButtonForRefreshDaddy {
-  border-radius: 7px;
-  background: #b20238;
-  padding: 10px 22px;
-  color: #fff;
-  font-weight: bolder;
-  font-size: large;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-}
-
-#ButtonForRefreshDaddy:hover {
-  transition: all 0.2s ease-in-out;
-  background: #c73552;
-  color: #fff;
+  &::placeholder {
+    color: white;
+  }
 }

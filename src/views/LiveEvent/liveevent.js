@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Event from "./Event"
-import "./Livee.css"
+import Refresh from '../../components/RefreshButton/Refresh';
+import "./Livee.scss"
 
 
 export default function Liveevent() {
@@ -27,7 +28,7 @@ export default function Liveevent() {
 
     return (
         <div className="LiveApp">
-            <div className="Liveearch">
+            <div className="LiveSearch">
                 <h1 className="LiveText">Search</h1>
                 <form>
                     <input className="LiveInput" type="text" placeholder="Search Here"
@@ -35,6 +36,7 @@ export default function Liveevent() {
                     />
                 </form>
                 <br />
+                <Refresh></Refresh>
             </div>
             {flive.map(eventData => {
                 return (

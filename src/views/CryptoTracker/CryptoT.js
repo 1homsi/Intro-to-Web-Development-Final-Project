@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Coin from './Coin';
+import { refreshPage } from '../../Functions';
+import Refresh from '../../components/RefreshButton/Refresh';
 
 
 export default function CryptoT() {
@@ -25,21 +27,17 @@ export default function CryptoT() {
         coin.name.toString().toLowerCase().includes(search.toLowerCase())
     )
 
-    function refreshPage() {
-        window.location.reload(false);
-    }
-
     return (
-        <div className="coinApp">
-            <div className="coinSearch">
-                <h1 className="coinText">Search</h1>
+        <div className="CApp">
+            <div className="CSearch">
+                <h1 className="CText">Search</h1>
                 <form>
-                    <input className="coinInput" type="text" placeholder="Search Here"
+                    <input className="CInput" type="text" placeholder="Search Here"
                         onChange={handleChange}
                     />
                 </form>
                 <br />
-                <button id="ButtonForRefreshDaddy" onClick={refreshPage}>Refresh when you feel like it</button>
+                <Refresh></Refresh>
             </div>
             {filteredCoins.map(coin => {
                 return (

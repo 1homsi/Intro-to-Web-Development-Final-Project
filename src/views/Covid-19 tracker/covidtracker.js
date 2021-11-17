@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Country from "./Country"
-import "./Covid.css"
+import "./Covid.scss"
+import Refresh from '../../components/RefreshButton/Refresh';
+
 
 
 export default function Covidtracker() {
@@ -28,7 +30,7 @@ export default function Covidtracker() {
 
     return (
         <div className="countriesApp">
-            <div className="countriesearch">
+            <div className="countrieSearch">
                 <h1 className="countriesText">Search</h1>
                 <form>
                     <input className="countriesInput" type="text" placeholder="Search Here"
@@ -36,6 +38,10 @@ export default function Covidtracker() {
                     />
                 </form>
                 <br />
+                <div id="move">
+                    <Refresh></Refresh>
+                </div>
+                <br /><br /><br />
             </div>
             {filteredcountries.map(countries => {
                 return (

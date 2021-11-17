@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Livee.css"
+import "./Livee.scss"
 
 
 const Event = (props) => {

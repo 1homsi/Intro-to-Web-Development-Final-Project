@@ -12,7 +12,7 @@ export const Nav = styled.nav`
 `;
 
 export const NavLogoLink = styled(Link)`
-  color: #b20238;
+  color: #7F7EFF;
   font-family: 'Leckerli One', cursive;
   display: flex;
   align-items: center;
@@ -37,11 +37,11 @@ export const NavLink = styled(Link)`
   cursor: pointer;
 
   &.active {
-    color: #b20238;
+    color: #7F7EFF;
   }
   &:hover {
     transition: all 0.2s ease-in-out;
-    color: #c73552;
+    color: #A390E4;
   }
 `;
 
@@ -79,7 +79,7 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(Link)`
   border-radius: 4px;
-  background: #b20238;
+  background: #7F7EFF;
   padding: 10px 22px;
   color: #fff;
   outline: none;
@@ -89,7 +89,7 @@ export const NavBtnLink = styled(Link)`
   text-decoration: none;
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #c73552;
+    background: #A390E4;
     color: #fff;
   }
 `;

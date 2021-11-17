@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Home.css';
+import './Home.scss';
 import CovidSvg from "../../../Images/covid.svg";
 import CryptoT from '../../../Images/cyrptoT.svg';
 import WorldY from "../../../Images/WorldYay.svg"
