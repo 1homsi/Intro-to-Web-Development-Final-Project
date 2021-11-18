@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Coin from './Coin';
-import { refreshPage } from '../../Functions';
+// import { refreshPage } from '../../Functions';
 import Refresh from '../../components/RefreshButton/Refresh';
 
 

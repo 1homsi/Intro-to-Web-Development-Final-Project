@@ -15,13 +15,14 @@ export const MenuItems = [
         cName: "navb-links"
     },
     {
+        title: "Live Event",
+        to: "/liveE",
+        cName: "navb-links"
+    },
+    {
         title: "About",
         to: "/about",
         cName: "navb-links"
     },
-    {
-        title: "Contact Us",
-        to: "/contact-us",
-        cName: "navb-links"
-    },
+
 ]

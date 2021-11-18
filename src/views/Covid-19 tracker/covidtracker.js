@@ -48,7 +48,7 @@ export default function Covidtracker() {
                     <Country key={countries.id}
                         name={countries.country}
                         text={countries.cases}
-                        TCases={countries.todayCases}
+                        // TCases={countries.todayCases}
                         Death={countries.deaths}
                         Recovered={countries.recovered}
                     />

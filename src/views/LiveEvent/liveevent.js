@@ -36,7 +36,7 @@ export default function Liveevent() {
                     />
                 </form>
                 <br />
-                <Refresh></Refresh>
+                {/* <Refresh></Refresh> */}
             </div>
             {flive.map(eventData => {
                 return (
