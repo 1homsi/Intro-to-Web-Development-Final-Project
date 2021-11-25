@@ -1,7 +1,14 @@
 import React from 'react'
 import "./Covid.scss"
 
-const Coin = (props) => {
+interface props {
+    name: string,
+    text: number,
+    Death: number,
+    Recovered: number,
+}
+
+const Country: React.FC<props> = (props) => {
     return (
         <div className="Container">
             <div className="countriesRow">
@@ -17,4 +24,4 @@ const Coin = (props) => {
     )
 }
 
-export default Coin
+export default Country

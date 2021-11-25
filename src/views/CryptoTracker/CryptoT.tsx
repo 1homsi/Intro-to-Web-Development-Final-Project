@@ -1,12 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Coin from './Coin';
-// import { refreshPage } from '../../Functions';
 import Refresh from '../../components/RefreshButton/Refresh';
 
 
+interface CoinData {
+    id: string,
+    image: string,
+    name: string,
+    symbol: string,
+    current_price: number,
+    market_cap: number,
+    price_change_percentage_24h: number,
+    total_volume: number,
+}
+
 export default function CryptoT() {
-    const [coins, setCoins] = useState([])
+    const [coins, setCoins] = useState<CoinData[]>([])
 
     const [search, setSearch] = useState('')
 
@@ -19,7 +29,7 @@ export default function CryptoT() {
     }, []);
 
 
-    const handleChange = e => {
+    const handleChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
         setSearch(e.target.value)
     }
 
@@ -42,8 +52,8 @@ export default function CryptoT() {
             {filteredCoins.map(coin => {
                 return (
                     <Coin key={coin.id}
-                        name={coin.name}
-                        image={coin.image}
+                        namec={coin.name}
+                        imagen={coin.image}
                         symbol={coin.symbol}
                         marketcap={coin.market_cap}
                         price={coin.current_price}

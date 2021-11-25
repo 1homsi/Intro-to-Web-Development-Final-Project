@@ -26,7 +26,6 @@ export const NavLogoLink = styled(Link)`
   }
 `;
 
-
 export const NavLink = styled(Link)`
   color: #000;
   display: flex;

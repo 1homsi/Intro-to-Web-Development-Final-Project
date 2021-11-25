@@ -5,10 +5,18 @@ import "./Covid.scss"
 import Refresh from '../../components/RefreshButton/Refresh';
 
 
+interface CountriesData {
+    id : number,
+    country: string,
+    todayCases: number
+    cases: number,
+    deaths: number,
+    recovered: number,
+}
 
 export default function Covidtracker() {
 
-    const [countries, setcountries] = useState([])
+    const [countries, setcountries] = useState<CountriesData[]>([])
     const [search, setSearch] = useState('')
 
     useEffect(() => {
@@ -20,7 +28,7 @@ export default function Covidtracker() {
     }, []);
 
 
-    const handleChange = e => {
+    const handleChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
         setSearch(e.target.value)
     }
 

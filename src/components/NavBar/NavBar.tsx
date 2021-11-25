@@ -42,16 +42,16 @@ export default function NavBar() {
         </ul>
 
         <NavMenu>
-          <NavLink to='/' activeStyle>
+          <NavLink to='/'>
             Home
           </NavLink>|
-          <NavLink to='/ctracker' activeStyle>
+          <NavLink to='/ctracker'>
             Covid-19 Tracker
           </NavLink>|
-          <NavLink to='/cryptot' activeStyle>
+          <NavLink to='/cryptot'>
             Crypto Tracker
           </NavLink>|
-          <NavLink to='/liveE' activeStyle>
+          <NavLink to='/liveE' >
             Live Events
           </NavLink>
         </NavMenu>

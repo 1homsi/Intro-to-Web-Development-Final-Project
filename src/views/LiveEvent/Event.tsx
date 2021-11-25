@@ -2,18 +2,23 @@ import React from 'react'
 import "./Livee.scss"
 
 
-const Event = (props) => {
+interface props {
+    name: number,
+    title: string,
+}
+
+const Event: React.FC<props> = ({name, title}) => {
     return (
         <div className="Container">
             <div className="LiveRow">
                 <div className="Live">
 
-                    <h1 >{props.title}</h1>
-                    <h1 class="idkSomeMargin">Event Id: {props.name}</h1>
+                    <h1 >{title}</h1>
+                    <h1 className="idkSomeMargin">Event Id: {name}</h1>
                 </div>
             </div>
         </div >
     )
 }
 
-export default Event
+export default Event;

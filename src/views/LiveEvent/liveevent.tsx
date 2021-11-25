@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Event from "./Event"
-import Refresh from '../../components/RefreshButton/Refresh';
 import "./Livee.scss"
 
+interface EventData {
+    id: number,
+    title: string
+}
 
 export default function Liveevent() {
-    const [eventData, setEventData] = useState([])
+    const [eventData, setEventData] = useState<EventData[]>([])
     const [search, setSearch] = useState('')
 
     useEffect(() => {
@@ -14,17 +17,16 @@ export default function Liveevent() {
             const { events } = await res.json()
             setEventData(events)
         }
-
         fetchEvents()
     }, [])
 
-    const handleChange = e => {
+    const handleChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
         setSearch(e.target.value)
     }
 
     const flive = eventData.filter(eventData =>
         eventData.title.toString().toLowerCase().includes(search.toLowerCase())
-    )
+    )                                                                                                                                                     
 
     return (
         <div className="LiveApp">
@@ -36,7 +38,6 @@ export default function Liveevent() {
                     />
                 </form>
                 <br />
-                {/* <Refresh></Refresh> */}
             </div>
             {flive.map(eventData => {
                 return (

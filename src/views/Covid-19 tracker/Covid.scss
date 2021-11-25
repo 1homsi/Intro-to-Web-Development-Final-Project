@@ -7,6 +7,7 @@
   justify-content: center;
 }
 .countriesRow {
+  animation: MoveB 4s infinite;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -105,4 +106,22 @@
 
 #move {
   text-align: center;
+}
+
+@keyframes MoveB {
+  0% {
+    border-radius: 20px 7px 20px 7px;
+  }
+  25% {
+    border-radius: 7px 20px 7px 20px;
+  }
+  50% {
+    border-radius: 20px 7px 20px 7px;
+  }
+  75% {
+    border-radius: 7px 20px 7px 20px;
+  }
+  100% {
+    border-radius: 20px 7px 20px 7px;
+  }
 }
