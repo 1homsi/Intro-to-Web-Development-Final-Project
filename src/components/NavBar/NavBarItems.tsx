@@ -1,6 +1,5 @@
-// import { FaBars } from 'react-icons/fa';
-import { NavLink as Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { NavLink as Link } from "react-router-dom";
+import styled from "styled-components";
 
 export const Nav = styled.nav`
   background: #fff;
@@ -12,8 +11,8 @@ export const Nav = styled.nav`
 `;
 
 export const NavLogoLink = styled(Link)`
-  color: #7F7EFF;
-  font-family: 'Leckerli One', cursive;
+  color: #7f7eff;
+  font-family: "Leckerli One", cursive;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -36,11 +35,11 @@ export const NavLink = styled(Link)`
   cursor: pointer;
 
   &.active {
-    color: #7F7EFF;
+    color: #7f7eff;
   }
   &:hover {
     transition: all 0.2s ease-in-out;
-    color: #A390E4;
+    color: #a390e4;
   }
 `;
 
@@ -78,7 +77,7 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(Link)`
   border-radius: 4px;
-  background: #7F7EFF;
+  background: #7f7eff;
   padding: 10px 22px;
   color: #fff;
   outline: none;
@@ -88,7 +87,7 @@ export const NavBtnLink = styled(Link)`
   text-decoration: none;
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #A390E4;
+    background: #a390e4;
     color: #fff;
   }
 `;

@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './NavBar.scss'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./NavBar.scss";
 import {
   Nav,
   NavLogoLink,
   NavLink,
   NavMenu,
   NavBtn,
-  NavBtnLink
-} from './NavBarItems';
-import { MenuItems } from './NavList';
+  NavBtnLink,
+} from "./NavBarItems";
+import { MenuItems } from "./NavList";
 
 export default function NavBar() {
   const [hidden, setHidden] = useState(false);
   return (
     <>
       <Nav>
-        <NavLogoLink style={{ fontSize: 32 }} to='/'>
+        <NavLogoLink style={{ fontSize: 32 }} to="/">
           PP Republic
         </NavLogoLink>
         <div className="menu-icon">
@@ -33,7 +33,11 @@ export default function NavBar() {
           {MenuItems.map((item, index) => {
             return (
               <li key={index}>
-                <Link onClick={() => setHidden(false)} className={item.cName} to={item.to}>
+                <Link
+                  onClick={() => setHidden(false)}
+                  className={item.cName}
+                  to={item.to}
+                >
                   {item.title}
                 </Link>
               </li>
@@ -42,23 +46,15 @@ export default function NavBar() {
         </ul>
 
         <NavMenu>
-          <NavLink to='/'>
-            Home
-          </NavLink>|
-          <NavLink to='/ctracker'>
-            Covid-19 Tracker
-          </NavLink>|
-          <NavLink to='/cryptot'>
-            Crypto Tracker
-          </NavLink>|
-          <NavLink to='/liveE' >
-            Live Events
-          </NavLink>
+          <NavLink to="/">Home</NavLink>|
+          <NavLink to="/ctracker">Covid-19 Tracker</NavLink>|
+          <NavLink to="/cryptot">Crypto Tracker</NavLink>|
+          <NavLink to="/liveE">Live Events</NavLink>
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to='/about'>About Us</NavBtnLink>
+          <NavBtnLink to="/about">About Us</NavBtnLink>
         </NavBtn>
       </Nav>
     </>
   );
-};
+}

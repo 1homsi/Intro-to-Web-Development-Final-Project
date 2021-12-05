@@ -9,14 +9,13 @@ import Footer from "./components/Footer/Footer";
 // Screen Imports
 import AboutScreen from "./views/AboutScreen";
 import HomeScreen from "./views/HomeScreen";
-import ComingSoon from "./views/ComingSoon";
 import CovidT from "./views/Covid-19 tracker/covidtracker";
 import CryptoT from "./views/CryptoTracker/CryptoT";
 import Liveevent from "./views/LiveEvent/liveevent";
+import MainGame from "./views/Snake Game/GameScreen";
 
 //Framer Motion Imports
 import { AnimatePresence, motion } from "framer-motion";
-import MainGame from "./views/Snake Game/GameScreen";
 
 interface LocationState {
   from: {
@@ -40,16 +39,6 @@ export default function App() {
                 transition={{ duration: 0.5 }}
               >
                 <AboutScreen />
-              </motion.div>
-            </Route>
-            <Route path="/comingsoon">
-              <motion.div
-                initial={{ scaleY: 0 }}
-                animate={{ scaleY: 1 }}
-                exit={{ scaleY: 0 }}
-                transition={{ duration: 0.7 }}
-              >
-                <ComingSoon />
               </motion.div>
             </Route>
             <Route path="/ctracker">

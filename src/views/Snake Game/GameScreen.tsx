@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import "./Game.scss";
 import { Snake, Food } from "./Charcters";
+import { Link } from "react-router-dom";
 
 const getRandomCoordinates = () => {
   let min = 1;
@@ -126,26 +127,32 @@ class MainGame extends Component {
   onGameOver() {
     alert(`Game Over. Snake len is ${this.state.snakeDots.length}`);
     this.setState(initialState);
+    setInterval(() => {
+      console.log(this.state.snakeDots.length);
+    }, 1000);
   }
 
   render() {
     return (
       <div>
         <h3 id="Pagehead">
-          We Dont really have an Contact Us page but here's a game
+          We Dont really have an Contact Us page so here's a game
         </h3>
         <div className="game-area">
           <Snake snakeDots={this.state.snakeDots} />
           <Food dot={this.state.food} />
         </div>
-        <button
+        {/* <button
           id="EndGame"
           onClick={() => {
             this.onGameOver();
           }}
         >
           End Game
-        </button>
+        </button> */}
+        <Link to="/ContactUs">
+          <button className="main__btn">Actual Contact Us</button>
+        </Link>
       </div>
     );
   }
